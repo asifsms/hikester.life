@@ -1,0 +1,153 @@
+{% extends 'base.html' %}
+{% block title %}
+<title>Package</title>
+{% endblock title %}
+{% block body %}
+{% load static %}
+<!-- Start: package -->
+<div class="container-fluid" style="padding-top: 78px;width: 95%;">
+    <div class="shadow-lg row" style="background-color: rgba(238,244,247,0.63);">
+        <div class="col-md-7" style="padding: 17px;padding-left: 15px;"><img class="img-fluid"
+                src="{{package.image.url}}"></div>
+        <div class="text-left col-md-5" style="padding-left: 0px;">
+            <h3 class="text-left name" style="font-size: 25px;margin-bottom: 16px;margin-left: 12px;margin-top: 23px;">
+                {{package.title}}</h3>
+            <!-- Start: package -->
+            <div class="col-sm-6 col-md-4 item" style="width: 376px;margin: 14px;padding-left: 1px;max-width: 100%;">
+                <div class="text-left"><i class="fa fa-sun-o"></i><span id="days"
+                        style="margin-left: 6px;color: #409ee1;"><strong>{{package.days}}</strong></span><span
+                        class="text-left" style="margin-left: 6px;color: #409ee1;"><strong>days</strong></span><i
+                        class="fa fa-moon-o" style="margin-left: 29px;"></i>
+                    <span id="nights"
+                        style="margin-left: 6px;color: #409ee1;"><strong>{{package.nights}}</strong></span><span
+                        style="margin-left: 6px;color: #409ee1;"><strong>Nights</strong></span>
+                </div>
+                <!-- Start: inclusions -->
+                <div class="text-left row" style="min-height: 69px;width: 324px;margin-top: 18px;">
+                    <div style="margin-top: 9px;background-color: rgba(217,233,235,0);height: 41px;"><i
+                            class="fa fa-home border rounded-0 fa-lg"
+                            style="width: 16px;height: 4px;margin-top: 10px;margin-left: 39px;"></i>
+                        <!-- Start: line break --><br>
+                        <!-- End: line break --><span
+                            style="height: 6px;width: 21px;margin-left: 9px;font-size: 12px;">Accomodation</span></div>
+                    <div class="text-center"
+                        style="margin-top: 15px;background-color: rgba(217,233,235,0);height: 41px;"><i
+                            class="fa fa-car fa-lg"></i>
+                        <!-- Start: line break --><br>
+                        <!-- End: line break --><span
+                            style="height: 6px;width: 21px;margin-left: 10px;font-size: 12px;">Transport</span></div>
+                    <div style="margin-top: 9px;background-color: rgba(217,233,235,0);height: 41px;"><i
+                            class="fas fa-utensils fa-lg"
+                            style="width: 16px;height: 6px;margin-top: 10px;margin-left: 30px;"></i>
+                        <!-- Start: line break --><br>
+                        <!-- End: line break --><span
+                            style="height: 6px;width: 21px;margin-left: 26px;font-size: 12px;">Meals</span></div>
+                    <div style="margin-top: 9px;background-color: rgba(217,233,235,0);height: 41px;"><i
+                            class="fa fa-binoculars fa-lg"
+                            style="width: 16px;height: 6px;margin-top: 10px;margin-left: 39px;margin-right: 0px;"></i>
+                        <!-- Start: line break --><br>
+                        <!-- End: line break --><span
+                            style="height: 6px;width: 21px;margin-left: 18px;font-size: 12px;">Sightseeing</span></div>
+                </div>
+                <!-- End: inclusions -->
+                <hr style="background-color: #110d0d;margin-top: 6px;margin-bottom: -19px;">
+                <div style="width: 99px;min-height: 0px;height: 30px;margin-top: 24px;"><span
+                        style="margin-bottom: 0px;margin-top: 6px;"><br>Starting From<br></span></div>
+                <div class="text-justify row"
+                    style="margin: -1px;margin-left: -16px;height: 80px;width: 100%;margin-top: 1px;"><i
+                        class="fa fa-rupee fa-2x"
+                        style="width: 27px;height: 34px;margin-top: 24px;margin-left: 19px;"></i>
+                    <p class="description" style="font-size: 30px;color: #409ee1;padding-top: 17px;">{{package.price}}
+                    </p>
+                </div>
+            </div>
+            <!-- End: package -->
+            <div class="row" style="width: 100%;margin-left: 18px;margin-bottom: 0%;margin-top: 20%;">
+                <div class="text-nowrap col-md-12 col-sm-12 col-lg-6">
+                    <a class="text-decoration-none" href="tel: +919539867664">
+                        <div class="text-center border-success" id="contact-btn"
+                            style="padding: 8px;width: 100%;margin-top: 6px;"><i class="fa fa-volume-control-phone"
+                                style="margin-right: -1px;font-size: 24px;"></i><span>+919539867664</span></div>
+                    </a>
+                </div>
+                <div class="col-md-12 col-sm-12 col-lg-6" style="margin-top: 6px;margin-bottom: 8px;">
+                    <a class="text-decoration-none" href="#">
+                        <div class="text-center border-success" data-bs-hover-animate="pulse" id="contact-btn"
+                            style="padding: 8px;width: 100%;background-color: #51b32f;"><i class="fa fa-whatsapp"
+                                style="margin-right: 10px;font-size: 25px;color: rgb(244,246,248);"></i><span
+                                style="color: rgb(248,249,251);">WhatsApp</span></div>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- End: package -->
+<!-- Start: details -->
+<div class="container-fluid">
+    <div class="row" style="margin-top: 9px;">
+        <!-- Start: about -->
+        <div class="col-md-8" style="padding: 2%;">
+            <div style="padding-top: 0px;padding-left: 0px;">
+                <p class="text-break text-dark border rounded-0 shadow"
+                    style="padding: 16px;font-family: 'Roboto Slab', serif;padding-bottom: 45px;padding-top: 28px;margin-left: 1px;">
+                    {{package.about}}
+                </p>
+            </div>
+            <!-- Start: itinerary -->
+            <div class="border rounded-0 shadow" style="padding: 3px;padding-top: 24px;padding-bottom: 24px;">
+                <h3 style="padding-right: 0px;margin-left: 12px;">Itinerary</h3>
+                <!-- Start: day -->
+                <div>
+                    {% for itinerary in itineraries %}
+                    <div class="row" style="margin-top: 22px;max-width: 100%;margin-left: 0px;">
+                        <div class="col-md-3 col-xl-2" style="padding-right: 6px;padding-top: 19px;"><span
+                                style="padding-left: 12px;"><strong>Day {{itinerary.day}}</strong></span><i
+                                class="fa fa-map-marker fa-lg"
+                                style="margin-left: 14px;margin-right: 14px;color: #409ee1;"></i></div>
+                        <div class="text-break col-md-9 col-xl-10"
+                            style="padding-left: 10px;padding-right: 22px; line-height: 2;">
+                            <p style="padding: 0px;">
+                                {{itinerary.schedule | linebreaks}}
+                            </p>
+                        </div>
+                    </div>
+                    {% endfor %}
+
+                </div>
+                <!-- End: day -->
+            </div>
+            <!-- End: itinerary -->
+        </div>
+        <!-- End: about -->
+        <!-- Start: enquiry -->
+        <div class="col-md-4" style="padding: 10px;padding-right: 10px;padding-top: 10px;">
+            <!-- Start: message-box -->
+            <div class="text-center border rounded-0 shadow"
+                style="margin-top: 14px;padding-top: 47px;margin-right: 19px;"><i class="fa fa-send"
+                    style="height: 19px;font-size: 41px;color: #409ee1;margin-top: 0px;"></i>
+                <h4 style="margin-top: -27px;padding-bottom: 0px;"><br><strong>Fill Enquiry Form Below</strong><br></h4>
+                <div>
+                    <form>
+                        <div class="form-group" style="padding: 23px;padding-top: 22px;"><input
+                                class="border rounded-0 shadow-sm form-control" type="text" placeholder="Name"
+                                style="width: 95%;margin-bottom: 18px;margin-top: 8px;" required=""><textarea
+                                class="border rounded-0 shadow-sm form-control"
+                                style="width: 95%;height: 74px;margin-top: 7px;" placeholder="Message"></textarea><input
+                                class="border rounded-0 shadow-sm form-control d-lg-flex" type="email"
+                                placeholder="Email" style="width: 95%;margin-left: 0%;margin-top: 11px;"
+                                required=""><input class="border rounded-0 shadow-sm form-control" type="number"
+                                required="" placeholder="Phone Number"
+                                style="margin-top: 18px;width: 95%;margin-left: 0px;"><button
+                                class="btn btn-primary btn-lg" type="submit" style="margin-top: 33px;">Send
+                                Message</button></div>
+                    </form>
+                </div>
+            </div>
+            <!-- End: message-box -->
+        </div>
+        <!-- End: enquiry -->
+    </div>
+</div>
+<!-- End: details -->
+{% endblock body %}

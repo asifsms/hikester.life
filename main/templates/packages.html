@@ -1,0 +1,87 @@
+{% extends 'base.html' %}
+{% block title %}
+<title>Packages</title>
+{% endblock title %}
+{% block body %}
+{% load static %}
+
+<!-- Start: Packages -->
+<div id="packages" class="article-list" style="width: 100%;padding-top: 56px;">
+    <div class="container" style="background-color: #eef4f7;width: 100%;max-width: 100%;">
+        <!-- Start: Intro -->
+        <div class="intro">
+            <h2 class="text-center">Packages</h2>
+            <p class="text-center">Nunc luctus in metus eget fringilla. Aliquam sed justo ligula. Vestibulum nibh erat,
+                pellentesque ut laoreet vitae. </p>
+        </div>
+        <!-- End: Intro -->
+        <!-- Start: Articles -->
+        <div class="row articles" style="padding: 0px;">
+            {% for package in packages %}
+            <div class="col col-md-6 col-lg-4" style="padding: 1%;margin: 0px;">
+                <div class="text-left shadow" data-bs-hover-animate="pulse"
+                    style="padding: 20px;margin: 9px;margin-left: 0px;background-color: #ffffff;max-height: 100%;"><a
+                        href="{% url 'package' package.id %}"><img class="img-fluid" src="{{package.image.url}}"
+                            style="margin: 0px;"></a>
+                    <h3 class="text-left name" style="font-size: 24px;margin-top: 14px;">{{package.title}}</h3>
+                    <div class="text-left"><i class="fa fa-sun-o"></i><span id="days"
+                            style="margin-left: 6px;">{{package.days}}</span><span class="text-left"
+                            style="margin-left: 6px;">days</span><i class="fa fa-moon-o"
+                            style="margin-left: 29px;"></i><span id="nights"
+                            style="margin-left: 6px;">{{package.nights}}</span>
+                        <span style="margin-left: 6px;">Nights</span>
+                    </div>
+                    <!-- Start: inclusions -->
+                    <div class="text-justify row" style="min-height: 69px;width: 329px;padding: 6px;max-width: 100%;">
+                        <div style="margin-top: 9px;background-color: rgba(217,233,235,0);height: 41px;"><i
+                                class="fa fa-home border rounded-0 fa-lg"
+                                style="width: 16px;height: 4px;margin-top: 10px;margin-left: 39px;"></i>
+                            <!-- Start: line break --><br>
+                            <!-- End: line break --><span
+                                style="height: 6px;width: 21px;margin-left: 9px;font-size: 12px;">Accomodation</span>
+                        </div>
+                        <div class="text-center"
+                            style="margin-top: 15px;background-color: rgba(217,233,235,0);height: 41px;"><i
+                                class="fa fa-car fa-lg"></i>
+                            <!-- Start: line break --><br>
+                            <!-- End: line break --><span
+                                style="height: 6px;width: 21px;margin-left: 10px;font-size: 12px;">Transport</span>
+                        </div>
+                        <div style="margin-top: 9px;background-color: rgba(217,233,235,0);height: 41px;"><i
+                                class="fas fa-utensils fa-lg"
+                                style="width: 16px;height: 6px;margin-top: 10px;margin-left: 30px;"></i>
+                            <!-- Start: line break --><br>
+                            <!-- End: line break --><span
+                                style="height: 6px;width: 21px;margin-left: 26px;font-size: 12px;">Meals</span></div>
+                        <div style="margin-top: 9px;background-color: rgba(217,233,235,0);height: 41px;"><i
+                                class="fa fa-binoculars fa-lg"
+                                style="width: 16px;height: 6px;margin-top: 10px;margin-left: 39px;margin-right: 0px;"></i>
+                            <!-- Start: line break --><br>
+                            <!-- End: line break --><span
+                                style="height: 6px;width: 21px;margin-left: 18px;font-size: 12px;">Sightseeing</span>
+                        </div>
+                    </div>
+                    <!-- End: inclusions -->
+                    <hr
+                        style="background-color: #110d0d;margin-top: 6px;margin-bottom: 0px;width: 90%;margin-left: 0px;">
+                    <div style="width: 99px;min-height: 0px;height: 30px;"><span
+                            style="margin-bottom: 0px;"><br>Starting From<br></span></div>
+                    <div class="text-justify row" style="margin: -1px;margin-left: -16px;height: 80px;width: 100%;"><i
+                            class="fa fa-rupee fa-2x"
+                            style="width: 27px;height: 34px;margin-top: 24px;margin-left: 19px;"></i>
+                        <p class="description" style="font-size: 30px;color: #409ee1;margin-top: 16px;">
+                            {{package.price}}</p><a class="action" href="{% url 'package' package.id %}"
+                            style="margin-left: 10%;height: auto;"><button class="btn btn-primary" type="button"
+                                style="background-color: #0bd7d3;width: 116px;margin-bottom: 73px;margin-right: -2px;margin-top: 12px;">View
+                                details</button></a>
+                    </div>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+        <!-- End: Articles -->
+    </div>
+</div>
+<!-- End: Packages -->
+
+{% endblock body %}

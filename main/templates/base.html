@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+{% load static %}
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  {% block title %}
+
+  {% endblock title %}
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Aldrich">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Aleo">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Amiri">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Anonymous+Pro">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Arbutus+Slab">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Droid+Serif:400,700,400italic,700italic">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Kaushan+Script">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lora">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat:400,700">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto+Slab:400,100,300,700">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Cookie">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.1/css/all.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="{% static '/fonts/fontawesome5-overrides.min.css' %}">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.8.2/css/lightbox.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/3.3.1/css/swiper.min.css">
+  <link rel="stylesheet" href="{% static '/css/styles.min.css' %}">
+  <link rel="stylesheet" href="{% static '/css/Basic-fancyBox-Gallery.css' %}">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.5/jquery.fancybox.min.css">
+</head>
+
+<body style="margin:auto;">
+  <!-- Start: gradient-navbar -->
+  <nav class="navbar navbar-dark navbar-expand-md" id="app-navbar"
+    style="width: 100%;margin: 0px;margin-bottom: 0px;min-width: 100%;max-width: 100%;">
+    <div class="container-fluid" id='#topheader'><a class="navbar-brand" href="/index">Hikester</a><button data-toggle="collapse"
+        class="navbar-toggler" data-target="#navcol-1"><span class="sr-only">Toggle navigation</span><span
+          class="navbar-toggler-icon"></span></button>
+      <div class="collapse navbar-collapse" id="navcol-1">
+        <ul class="nav navbar-nav ml-auto">
+          <li class="nav-item active" role="presentation"><a class="nav-link" href="/">Home</a></li>
+          <li class="nav-item" role="presentation"></li>
+          <li class="nav-item" role="presentation"><a class="nav-link" href="{% url 'destinations' %}">Destinations</a></li>
+          <li class="nav-item" role="presentation"><a class="nav-link" href="{% url 'packages' %}">Packages</a></li>
+          <li class="nav-item" role="presentation"><a class="nav-link" href="{% url 'gallery' %}">Gallery</a></li>
+          <li class="nav-item" role="presentation"><a class="nav-link" href="#contact">Contact</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+  <!-- End: gradient-navbar -->
+  {% block body %}
+
+  {% endblock body %}
+
+
+  <!-- Start: Pretty Footer -->
+  <footer style="margin-top: 0px;">
+    <div class="row">
+      <div class="col-sm-6 col-md-4 footer-navigation">
+        <h3><a href="#">Hikester Explorations</a></h3>
+        <p class="links"><a ></a>Treking</a><strong> · </strong><a >Backpacking</a><strong> · </strong><a
+            >Kayaking</a><strong> · </strong><a >Tour</a><strong> · </strong><a >Guidens</a></p>
+        <!-- <p class="company-name">Company Name © 2015 </p> -->
+      </div>
+      <div class="col-sm-6 col-md-4 footer-contacts">
+        <div><span class="fa fa-map-marker footer-contacts-icon"> </span>
+          <p><span class="new-line-span">Calicut</span> Kerala, India</p>
+        </div>
+        <div><i class="fa fa-phone footer-contacts-icon"></i>
+          <p class="footer-center-info email text-left"> +91 9539867664</p>
+        </div>
+        <div><i class="fa fa-envelope footer-contacts-icon"></i>
+          <p> <a href="#" target="_blank">hikester.life@gmail.com</a></p>
+        </div>
+      </div>
+      <div class="clearfix"></div>
+      <div class="col-md-4 footer-about">
+        <h4>About the company</h4>
+        <p> An alternative lifestyle that gives you the oppurtunity to push your boundaries and revive your zest. </p>
+        <div class="social-links social-icons"><a href="https://www.facebook.com/hikesterlife"><i class="fa fa-facebook"></i></a><a href="https://www.instagram.com/hikester_explorations/"><i
+              class="fa fa-instagram"></i></a>
+              <!-- <a href="#"><i class="fa fa-linkedin"></i></a><a href="#"><i -->
+              <!-- class="fa fa-github"></i></a></div> -->
+      </div>
+    </div>
+  </footer>
+  <!-- End: Pretty Footer -->
+
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/js/bootstrap.bundle.min.js"></script>
+  <script src="{% static 'js/smart-forms.min.js' %}"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.4.1/jquery.easing.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.8.2/js/lightbox.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/3.3.1/js/swiper.jquery.min.js"></script>
+  <script src="{% static 'js/script.min.js' %}"></script>
+  <script src="{% static 'js/Basic-fancyBox-Gallery.js' %}"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.5/jquery.fancybox.pack.js"></script>
+</body>
+
+</html>

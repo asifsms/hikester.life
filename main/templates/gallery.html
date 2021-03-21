@@ -1,0 +1,36 @@
+{% extends 'base.html' %}
+{% block title %}
+<title>Gallery</title>
+{% endblock title %}
+{% block body %}
+{% load static %}
+
+<!-- Start: Lightbox Gallery -->
+<div id="gallery" class="photo-gallery" style="padding-top: 56px;">
+    <div class="container">
+        <!-- Start: Intro -->
+        <div class="intro">
+            <h2 class="text-center">Gallery</h2>
+            <p class="text-center">Nunc luctus in metus eget fringilla. Aliquam sed justo ligula. Vestibulum nibh erat,
+                pellentesque ut laoreet vitae. </p>
+        </div>
+        <!-- End: Intro -->
+
+        <!-- Start: Basic fancyBox Gallery -->
+        <div class="container">
+            <div class="row flex-box flex-wrap-wrap">
+                {% for image in gallerys %}
+                <div class="col-sm-4 flex-box flex-justify-center flex-align-center"><a class="fancybox" rel="gallery1"
+                        title="{{image.caption}}" href="{{image.image.url}}"><img class="img-fluid"
+                            src="{{image.image.url}}"></a></div>
+                {% endfor %}
+                
+            </div>
+        </div>
+        <!-- End: Basic fancyBox Gallery -->
+
+    </div>
+</div>
+<!-- End: Lightbox Gallery -->
+
+{% endblock %}

@@ -1,0 +1,41 @@
+{% extends 'base.html' %}
+{% block title %}
+<title>Destinations</title>
+{% endblock title %}
+{% block body %}
+{% load static %}
+
+<!-- Start: Destination -->
+<div id="destinations" class="photo-gallery" style="width: 100%; padding-top: 56px;">
+    <div class="container">
+        <!-- Start: Intro -->
+        <div class="intro">
+            <h2 class="text-center">Destinations</h2>
+            <p class="text-center">Nunc luctus in metus eget fringilla. Aliquam sed justo ligula. Vestibulum nibh erat,
+                pellentesque ut laoreet vitae. </p>
+        </div>
+        <!-- End: Intro -->
+        <!-- Start: Photos -->
+        <div>
+            <div class="row photos">
+                {% for place in destinations %}
+                <div class="col-sm-6 col-md-4 col-lg-3 mb-4 " data-bs-hover-animate="pulse" id="Destination">
+                    <div class="shadow dest">
+                            <!-- <a class="text-decoration-none" data-lightbox="photos" href="{% static 'img/desk.jpg' %}"> -->
+                                <a class="text-decoration-none" href="{% url 'destination-packages' place.id %}">
+                                <img class="img-fluid dest-image " src="{{place.image.url}}">
+                                <div>
+                                    <div class="text-center" style="font-size: 1px;"><span
+                                            style="font-size: 26px;color: rgb(6,8,13);">{{place.place}}</span></div>
+                                </div>
+                            </a></div>
+                </div>
+                {% endfor %}
+            </div>
+        </div>
+        <!-- End: Photos -->
+    </div>
+</div>
+<!-- End: Destination -->
+
+{% endblock body %}
