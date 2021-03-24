@@ -24,7 +24,7 @@ EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
 DEFAULT_FROM_EMAIL = 'asif1791995@gmail.com'
 SERVER_EMAIL = 'asif1791995@gmail.com'
 
-ALLOWED_HOSTS = ['1242fefaac93.ngrok.io']
+ALLOWED_HOSTS = []
 
 
 # Application definition
